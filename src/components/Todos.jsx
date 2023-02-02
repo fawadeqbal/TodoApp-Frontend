@@ -19,14 +19,14 @@ const Todos = () => {
 
     useEffect(() => {
         dispatch(getAllTodos());
-    }, [])
+    }, )
 
     const getTodos= () =>{
         if(currentTab=== ALL_TODOS){
             return todos;
-        } else if(currentTab == ACTIVE_TODOS){
+        } else if(currentTab === ACTIVE_TODOS){
             return todos.filter(todo => !todo.done);
-        } else if( currentTab== DONE_TODOS){
+        } else if( currentTab=== DONE_TODOS){
             return todos.filter(todo => todo.done);
         }
     }
